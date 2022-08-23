@@ -10,7 +10,7 @@ function AppRoutes() {
 
       <Route exact path="/cart" element={<CartPage />} />
 
-      <Route exact path="/products/:id" element={<ProductPage />} />
+      <Route exact path="/products/:name" element={<ProductPage />} />
 
       <Route path="*" element={<HomePage />} />
     </Routes>
