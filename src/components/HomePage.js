@@ -1,3 +1,5 @@
-function CartPage() {
-    return (<div />)
+function HomePage() {
+    return (<div />);
 }
+
+export default HomePage;

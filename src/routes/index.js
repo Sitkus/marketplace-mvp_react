@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from '~/components/HomePage.js';
-import ProductPage from '~/components/ProductPage.js';
-import CartPage from '~/components/CartPage.js';
+import HomePage from '../components/HomePage.js';
+import ProductPage from '../components/ProductPage.js';
+import CartPage from '../components/CartPage.js';
 
 function AppRoutes() {
   return (
