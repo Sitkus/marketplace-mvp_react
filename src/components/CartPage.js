@@ -1,17 +1,19 @@
+import { useSelector } from 'react-redux';
+
 function CartPage() {
-    const cartItems = [
-        'Hello',
-        'Again'
-    ]
+    const cartItems = useSelector(state => state.cart);
 
-    return (
-          <div>
+    return cartItems.length ? (
+        <div>
             Are you ready to purchase these?
-
             <ul>
-              {cartItems.map((cartItem) => <li key={cartItem}>{cartItem}</li>)}
+                {cartItems.map((cartItem, index) => (
+                    <li key={`${cartItem.name}-${index}`}>{cartItem.name}</li>
+                ))}
             </ul>
-          </div>
+        </div>
+    ) : (
+        <div>Your cart is empty... :(</div>
     );
 }
 

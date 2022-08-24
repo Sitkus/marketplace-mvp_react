@@ -4,17 +4,17 @@ import ProductPage from '../components/ProductPage.js';
 import CartPage from '../components/CartPage.js';
 
 function AppRoutes() {
-  return (
-    <Routes>
-      <Route exact path="/" element={<HomePage />} />
+    return (
+        <Routes>
+            <Route exact path="/" element={<HomePage />} />
 
-      <Route exact path="/cart" element={<CartPage />} />
+            <Route exact path="/cart" element={<CartPage />} />
 
-      <Route exact path="/products/:name" element={<ProductPage />} />
+            <Route exact path="/products/:name" element={<ProductPage />} />
 
-      <Route path="*" element={<HomePage />} />
-    </Routes>
-  );
+            <Route path="*" element={<HomePage />} />
+        </Routes>
+    );
 }
 
 export default AppRoutes;

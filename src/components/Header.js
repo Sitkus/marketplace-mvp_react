@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Header() {
+    const cartItemsCount = useSelector(state => state.cart).length;
+
     return (
         <header>
-            <h1>
-                90s shop
-            </h1>
+            <h1>90s shop</h1>
 
             <nav>
                 <ul style={{ listStyleType: 'none', display: 'flex' }}>
@@ -14,7 +15,7 @@ function Header() {
                     </li>
                     |
                     <li>
-                        <Link to="cart">Cart ({0})</Link>
+                        <Link to="cart">Cart ({cartItemsCount})</Link>
                     </li>
                 </ul>
             </nav>
