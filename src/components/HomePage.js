@@ -3,20 +3,20 @@ import 'assets/scss/components/HomePage.scss';
 
 function HomePage() {
     return (
-        <article className="home">
-            <h2 className="home__title">Welcome to our shop!</h2>
+        <article className="home-page">
+            <h2 className="home-page__title">Welcome to our shop!</h2>
 
-            <p className="home__paragraph">
+            <p className="home-page__paragraph">
                 You are probably interested in{' '}
-                <Link className="home__link" to="products/a">
+                <Link className="home-page__link" to="products/a">
                     A
                 </Link>
                 .
             </p>
 
-            <p className="home__paragraph">
+            <p className="home-page__paragraph">
                 Check out the newest product{' '}
-                <Link className="home__link" to="products/b">
+                <Link className="home-page__link" to="products/b">
                     B
                 </Link>
                 !

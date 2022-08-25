@@ -1,4 +1,4 @@
-.home {
+.home-page {
     margin: 0 auto;
     width: 100%;
     max-width: var(--var-max-width);
@@ -20,11 +20,11 @@
 }
 
 @media screen and (min-width: 500px) {
-    .home__title {
+    .home-page__title {
         font-size: 3rem;
     }
 
-    .home__link {
+    .home-page__link {
         transition: 150ms color ease-in-out;
 
         &:hover {
