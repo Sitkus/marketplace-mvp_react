@@ -23,7 +23,7 @@ function ProductPage() {
     return (
         <article className="product-page">
             <section className="card">
-                <div>
+                <div className="card__title-wrapper">
                     <h2 className="card__title">Product {currentProduct.name.toUpperCase()}</h2>
                     <p className="card__price">Price: {currentProduct.price} USD</p>
                 </div>

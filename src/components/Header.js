@@ -12,7 +12,7 @@ function Header() {
         <header className="header">
             <div className="header__wrapper">
                 <h1 className="header__title">
-                    <NavLink to="/">90s shop</NavLink>
+                    <NavLink to="/">90's shop</NavLink>
                 </h1>
 
                 <nav className="header__nav">

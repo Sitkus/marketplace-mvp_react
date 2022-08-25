@@ -4,7 +4,7 @@
 
     // Colors
     --var-black: #161616;
-    --var-green: #00db96;
+    --var-green: #09a058;
     --var-violet: #49297e;
     --var-light-blue: #90dcff;
     --var-purple: #e10086;
@@ -62,15 +62,15 @@ button {
     border: none;
     padding: 1rem 0.7rem;
     cursor: pointer;
+    color: white;
 }
 
 @media screen and (min-width: 500px) {
     button {
-        transition: 150ms all ease-in-out;
+        transition: 250ms all ease-in-out;
 
         &:hover {
             background-color: var(--var-purple);
-            color: white;
         }
     }
 }

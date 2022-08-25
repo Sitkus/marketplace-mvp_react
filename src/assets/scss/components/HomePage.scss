@@ -4,12 +4,19 @@
     max-width: var(--var-max-width);
     padding: 3rem 2rem;
 
-    &__title {
+    &__title-wrapper {
         text-align: center;
-        font-weight: 600;
         padding-bottom: 2rem;
         margin-bottom: 2rem;
         border-bottom: 1px solid var(--var-black);
+    }
+
+    &__subtitle {
+        color: #999999;
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
     }
 
     &__paragraph {
