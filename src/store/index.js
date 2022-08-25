@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
-import a from '../assets/images/a.jpg';
-import b from '../assets/images/b.jpg';
+import a from 'assets/images/a.jpg';
+import b from 'assets/images/b.jpg';
 
 const itemsSlice = createSlice({
     name: 'items',
@@ -37,7 +37,7 @@ const cartSlice = createSlice({
         },
         incrementItemQuantity(state, action) {
             state[action.payload.index].quantity++;
-        }
+        },
     },
 });
 

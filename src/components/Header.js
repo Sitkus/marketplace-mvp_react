@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import 'assets/scss/components/Header.scss';
 
 function Header() {
     const cartItems = useSelector(state => state.cart);
@@ -8,21 +9,32 @@ function Header() {
     }, 0);
 
     return (
-        <header>
-            <h1>90s shop</h1>
+        <header className="header">
+            <div className="header__wrapper">
+                <h1 className="header__title">
+                    <NavLink to="/">90s shop</NavLink>
+                </h1>
 
-            <nav>
-                <ul style={{ listStyleType: 'none', display: 'flex' }}>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    |
-                    <li>
-                        <Link to="cart">Cart ({totalCartItemsQuantity})</Link>
-                    </li>
-                </ul>
-            </nav>
-            <hr />
+                <nav className="header__nav">
+                    <ul className="nav-wrapper">
+                        <li className="nav-wrapper__item">
+                            <NavLink className="nav-wrapper__link" to="/">
+                                Home
+                            </NavLink>
+                        </li>
+                        |
+                        <li className="nav-wrapper__item">
+                            <NavLink className="nav-wrapper__link" to="cart">
+                                Cart (
+                                <span className={totalCartItemsQuantity ? 'nav-wrapper__link--green' : ''}>
+                                    {totalCartItemsQuantity}
+                                </span>
+                                )
+                            </NavLink>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     );
 }

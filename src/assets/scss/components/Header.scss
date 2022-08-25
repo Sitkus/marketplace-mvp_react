@@ -1,0 +1,44 @@
+.header {
+    background-color: var(--var-yellow);
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        max-width: var(--var-max-width);
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: var(--var-purple);
+        flex: 1;
+    }
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    &__link {
+        &.active {
+            color: var(--var-purple);
+        }
+    }
+
+    &__link--green {
+        color: var(--var-green);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .nav-wrapper__link {
+        transition: 150ms color ease-in-out;
+
+        &:hover {
+            color: var(--var-purple);
+        }
+    }
+}
