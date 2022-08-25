@@ -6,13 +6,13 @@ const itemsSlice = createSlice({
     name: 'items',
     initialState: [
         {
-            name: 'a',
+            name: 'A',
             price: 30,
             imageSrc: a,
             quantity: 1,
         },
         {
-            name: 'b',
+            name: 'B',
             price: 66,
             imageSrc: b,
             quantity: 1,
