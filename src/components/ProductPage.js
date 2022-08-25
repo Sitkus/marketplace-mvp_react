@@ -24,13 +24,19 @@ function ProductPage() {
         <article className="product-page">
             <section className="card">
                 <div>
-                <h2 className="card__title">Product {currentProduct.name.toUpperCase()}</h2>
-                <p className="card__price">Price: {currentProduct.price} USD</p>
-        </div>
+                    <h2 className="card__title">Product {currentProduct.name.toUpperCase()}</h2>
+                    <p className="card__price">Price: {currentProduct.price} USD</p>
+                </div>
 
-                <button className="card__button" onClick={addProductToCart}>Add to cart</button>
+                <button className="card__button" onClick={addProductToCart}>
+                    Add to cart
+                </button>
 
-                <img className="card__image" src={currentProduct.imageSrc} alt={`Example image of a product: ${currentProduct.name.toUpperCase()}`} />
+                <img
+                    className="card__image"
+                    src={currentProduct.imageSrc}
+                    alt={`Example image of a product: ${currentProduct.name.toUpperCase()}`}
+                />
             </section>
         </article>
     );
