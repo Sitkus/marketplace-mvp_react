@@ -9,13 +9,13 @@ const itemsSlice = createSlice({
             name: 'a',
             price: 30,
             imageSrc: a,
-            quantity: 0,
+            quantity: 1,
         },
         {
             name: 'b',
             price: 66,
             imageSrc: b,
-            quantity: 0,
+            quantity: 1,
         },
     ],
 });
@@ -25,26 +25,23 @@ const cartSlice = createSlice({
     initialState: [],
     reducers: {
         addItem(state, action) {
-            const isItemAlreadyAdded = state.items.find(item => item.name === action.payload.name && item.quantity);
-
-            if (isItemAlreadyAdded) {
-                // state.items.findIndex()
-            } else {
-                state.push({
-                    name: action.payload.name,
-                    price: action.payload.price,
-                    imageSrc: action.payload.imageSrc,
-                    quantity: action.payload.quantity,
-                });
-            }
+            state.push({
+                name: action.payload.name,
+                price: action.payload.price,
+                imageSrc: action.payload.imageSrc,
+                quantity: action.payload.quantity,
+            });
         },
         removeItem(state, action) {
-            state = state.filter(item => item.name !== action.payload.name);
+            state.splice(action.payload.index, 1);
         },
+        incrementItemQuantity(state, action) {
+            state[action.payload.index].quantity++;
+        }
     },
 });
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem, incrementItemQuantity } = cartSlice.actions;
 
 export default configureStore({
     reducer: {
