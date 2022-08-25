@@ -1,0 +1,34 @@
+.home {
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--var-max-width);
+    padding: 3rem 2rem;
+
+    &__title {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    &__paragraph {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        color: var(--var-green);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .home__title {
+        font-size: 3rem;
+    }
+
+    .home__link {
+        transition: 150ms color ease-in-out;
+
+        &:hover {
+            color: var(--var-purple);
+        }
+    }
+}

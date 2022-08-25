@@ -1,18 +1,27 @@
 import { Link } from 'react-router-dom';
+import 'assets/scss/components/HomePage.scss';
 
 function HomePage() {
     return (
-        <div>
-            <h2>Welcome to our shop!</h2>
+        <article className="home">
+            <h2 className="home__title">Welcome to our shop!</h2>
 
-            <p>
-                You are probably interested in <Link to="products/a">A</Link>.
+            <p className="home__paragraph">
+                You are probably interested in{' '}
+                <Link className="home__link" to="products/a">
+                    A
+                </Link>
+                .
             </p>
 
-            <p>
-                Check out the newest product <Link to="products/b">B</Link>!
+            <p className="home__paragraph">
+                Check out the newest product{' '}
+                <Link className="home__link" to="products/b">
+                    B
+                </Link>
+                !
             </p>
-        </div>
+        </article>
     );
 }
 
