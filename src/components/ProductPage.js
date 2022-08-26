@@ -21,7 +21,6 @@ function ProductPage() {
             alert('Item is already in your cart! We have incremented its quantity');
         } else {
             dispatch(addItem(currentProduct));
-            alert('Item was added to the cart');
         }
     }
 
