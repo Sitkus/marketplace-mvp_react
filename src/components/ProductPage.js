@@ -9,7 +9,7 @@ function ProductPage() {
 
     const availableProducts = useSelector(state => state.items);
     const cartItems = useSelector(state => state.cart);
-    const currentProduct = availableProducts.find(product => product.name.toLowerCase() === name.toLowerCase());
+    const currentProduct = availableProducts.find(product => product.name.toLowerCase() === name?.toLowerCase());
 
     function addProductToCart() {
         const existingItemInCartIndex = cartItems.findIndex(
