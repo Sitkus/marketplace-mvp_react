@@ -9,7 +9,7 @@ function Header() {
     }, 0);
 
     return (
-        <header className="header">
+        <header className="header" data-testid="header">
             <div className="header__wrapper">
                 <h1 className="header__title">
                     <NavLink to="/">90's shop</NavLink>

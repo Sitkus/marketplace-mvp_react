@@ -3,7 +3,7 @@ import 'assets/scss/components/HomePage.scss';
 
 function HomePage() {
     return (
-        <article className="home-page">
+        <article className="home-page" data-testid="home-page">
             <section className="home-page__title-wrapper">
                 <h2 className="home-page__title">Welcome to our shop!</h2>
                 <h5 className="home-page__subtitle">
