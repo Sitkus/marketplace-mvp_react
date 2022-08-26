@@ -1,30 +1,18 @@
 # Marketplace MVP
 
-The goal of this task is to test your ability to test, refactor and implement new functionality on a given system. Note
-that this repository does not represent the actual code of CGTrader, but only acts as a testing ground.
-
-## New Functionality
-
-Imagine the situation where management assigns you a task. Management wants you to implement basic MVP functionality for
-the marketplace. User should be able to navigate between home page, product page and cart page, add multiple items to the cart and
-see the total amount for payment.
+The goal of this mini app is to test my ability to test, refactor and implement new funtionality on a given system.
+It is based on React and uses newest its versions.
 
 ## Tasks
 
 1. Implement MVP cart functionality
 2. Refactor implementation code and tests where you see fit. You have as much freedom here as you wish
-3. Improve the layout and styling of the application. No need to polish too much.
+3. Improve the layout and styling of the application.
 4. Make sure test suite runs through all of the tests successfully
 
-## Notes & Requirements
+## Netlify
 
-* You can spend as much time as you want.
-* You may refactor not only the application code, but the tests too. Keep in mind that test code is still code that
-needs to be maintained.
-* Use git to track your changes. **Fork or clone this repository** and commit often.
-* When finished, send us the link or the zip of the project via e-mail.
-
-Good luck!
+You can check live project on [netlify](https://mvp-cart.netlify.app)
 
 ---
 
