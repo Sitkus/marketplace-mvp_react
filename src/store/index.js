@@ -43,7 +43,7 @@ const cartSlice = createSlice({
         },
         clearCartItems(state) {
             state.splice(0, state.length);
-        }
+        },
     },
 });
 
