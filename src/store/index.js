@@ -38,10 +38,13 @@ const cartSlice = createSlice({
         incrementItemQuantity(state, action) {
             state[action.payload.index].quantity++;
         },
+        decrementItemQuantity(state, action) {
+            state[action.payload.index].quantity--;
+        },
     },
 });
 
-export const { addItem, removeItem, incrementItemQuantity } = cartSlice.actions;
+export const { addItem, removeItem, incrementItemQuantity, decrementItemQuantity } = cartSlice.actions;
 
 export default configureStore({
     reducer: {

@@ -6,6 +6,7 @@ import 'assets/scss/components/ProductPage.scss';
 function ProductPage() {
     const { name } = useParams();
     const dispatch = useDispatch();
+
     const availableProducts = useSelector(state => state.items);
     const cartItems = useSelector(state => state.cart);
     const currentProduct = availableProducts.find(product => product.name.toLowerCase() === name.toLowerCase());
@@ -17,16 +18,14 @@ function ProductPage() {
 
         if (existingItemInCartIndex >= 0) {
             dispatch(incrementItemQuantity({ index: existingItemInCartIndex }));
-
             alert('Item is already in your cart! We have incremented its quantity');
         } else {
             dispatch(addItem(currentProduct));
-
             alert('Item was added to the cart');
         }
     }
 
-    return (
+    return currentProduct ? (
         <article className="product-page">
             <section className="card">
                 <div className="card__title-wrapper">
@@ -41,10 +40,14 @@ function ProductPage() {
                 <img
                     className="card__image"
                     src={currentProduct.imageSrc}
-                    alt={`Example image of a product: ${currentProduct.name}`}
+                    alt={`Example of a product: ${currentProduct.name}`}
                 />
             </section>
         </article>
+    ) : (
+        <div className="product-page">
+            Product by the name: <strong>{name}</strong> doesn't exist, please return and try again.
+        </div>
     );
 }
 
