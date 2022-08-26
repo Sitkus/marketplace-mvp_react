@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeItem, incrementItemQuantity, decrementItemQuantity } from '../store';
+import { removeItem, incrementItemQuantity, decrementItemQuantity, clearCartItems } from '../store';
 import 'assets/scss/components/CartPage.scss';
 
 function CartPage() {
@@ -31,6 +31,11 @@ function CartPage() {
 
     function getCartItemTotalPrice(item) {
         return item.price * item.quantity;
+    }
+
+    function buyNow() {
+        alert('You have successfully purchased your items, thank you!');
+        dispatch(clearCartItems());
     }
 
     return cartItems.length ? (
@@ -74,6 +79,10 @@ function CartPage() {
             <div className="total-amount">
                 <p className="total-amount__title">Total amount: </p>
                 <p className="total-amount__price">{totalAmount} USD</p>
+            </div>
+
+            <div className="buy-now">
+                <button className="buy-now__button" onClick={() => buyNow()}>Buy Now</button>
             </div>
         </div>
     ) : (

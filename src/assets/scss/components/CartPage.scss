@@ -51,3 +51,11 @@
         gap: 0.5rem;
     }
 }
+
+.buy-now {
+    margin: 2rem 0;
+
+&__button {
+    width: 100%;
+}
+}
