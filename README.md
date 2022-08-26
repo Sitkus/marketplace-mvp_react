@@ -3,13 +3,6 @@
 The goal of this mini app is to test my ability to test, refactor and implement new funtionality on a given system.
 It is based on React and uses newest its versions.
 
-## Tasks
-
-1. Implement MVP cart functionality
-2. Refactor implementation code and tests where you see fit. You have as much freedom here as you wish
-3. Improve the layout and styling of the application.
-4. Make sure test suite runs through all of the tests successfully
-
 ## Netlify
 
 You can check live project on [netlify](https://mvp-cart.netlify.app)
