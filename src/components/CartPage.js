@@ -40,13 +40,13 @@ function CartPage() {
             <ul className="cart-page__list">
                 {cartItems.map((cartItem, index) => (
                     <li key={`${cartItem.name}-${index}`} className="cart-item">
-                        <article className="cart-item__description">
-                            <h3 className="cart-item__title">
+                        <div className="cart-item__description">
+                            <strong className="cart-item__title">
                                 {cartItem.name} ({cartItem.quantity})
-                            </h3>
+                            </strong>
 
                             <span>{getCartItemTotalPrice(cartItem)} USD</span>
-                        </article>
+                        </div>
 
                         <div className="cart-item__buttons-wrapper">
                             <button className="cart-item__button" onClick={() => incrementCartItemQuantity(index)}>
