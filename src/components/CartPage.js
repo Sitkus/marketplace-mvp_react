@@ -82,7 +82,7 @@ function CartPage() {
             </div>
 
             <div className="buy-now">
-                <button className="buy-now__button" onClick={() => buyNow()}>
+                <button className="buy-now__button" onClick={buyNow}>
                     Buy Now
                 </button>
             </div>
